@@ -1,0 +1,38 @@
+.row {
+    background-color: #F2D653;
+    padding-left: 150px;
+    padding-bottom: 80px;
+    padding-right: 150px;
+}
+
+
+h2 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    text-align: center;
+    font-style: italic;
+    font-size: 3em;
+    margin-bottom: 20px;
+
+}
+
+h3,
+h4 {
+    display: inline;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    text-align: justify;
+    color: #37424A;
+    width: auto;
+
+}
+
+.parte1,
+.parte2 {
+    text-align: justify;
+}
+
+.imgProject {
+    box-shadow: 10px 10px 10px black;
+}

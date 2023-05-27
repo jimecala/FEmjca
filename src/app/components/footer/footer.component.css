@@ -1,0 +1,15 @@
+.row {
+    background-color: #F2D653;
+}
+
+footer {
+    color: #fefefe;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+}

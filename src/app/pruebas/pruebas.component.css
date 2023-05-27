@@ -1,0 +1,119 @@
+.section-bee-jupiter {
+    background-color: #F2D653;
+    padding: 80px 0 120px 0;
+}
+
+.section-bee-jupiter .colophon {
+    padding-bottom: 120px;
+}
+
+.section-bee-jupiter .container {
+    max-width: 800px;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.section-bee-jupiter .avatar {
+    margin-left: 20px;
+}
+
+.avatar img {
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.section-bee-jupiter .caption {
+    color: #da3;
+}
+
+.caption {
+    margin: 0 0 60px 20px;
+}
+
+.section-bee-jupiter .caption a {
+    color: #544;
+    font-size: 12px;
+}
+
+.caption a:not(:first-child) {
+    margin-left: 8px;
+}
+
+.caption a {
+    font: 14px/16px 'Unica One', Helvetica, Arial, sans-serif;
+    letter-spacing: .1em;
+    color: #999;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.section-bee-jupiter .beewithoutstinger {
+    margin-bottom: 50px;
+}
+
+.section-bee-jupiter .beesvg {
+    display: block;
+    width: 120px;
+    text-align: center;
+    margin: auto;
+}
+
+.section-bee-jupiter hr {
+    border-top: 1px dashed #37424A;
+    border-bottom: none;
+    margin-bottom: 20px;
+    max-width: 780px;
+}
+
+/*AGREGADO POR MI*/
+.texto {
+    display: flex;
+}
+
+/**/
+
+.section-bee-jupiter h2 {
+    font: 5em 'Yeseva One', Georgia, serif;
+    color: #37424A;
+    text-transform: lowercase;
+    text-align: right;
+    width: 370px;
+    letter-spacing: -0.04em;
+    line-height: 1.1em;
+    vertical-align: top;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.section-bee-jupiter h2 span {
+    font: 0.67em 'Yeseva One', Georgia, serif;
+}
+
+.section-bee-jupiter p {
+    text-align: justify;
+    font: 300 0.8em/1.625em 'Merriweather Sans', Helvetica, sans-serif;
+    color: #37424A;
+    width: 390px;
+    margin: 0 0 20px 25px;
+    padding-top: 1.2em;
+}
+
+.section-bee-jupiter h3 {
+    text-align: center;
+    color: #37424A;
+    font: 1.2em 'Merriweather', Times New Roman, serif;
+    font-weight: 400;
+    margin: 40px 0 50px 0;
+    font-style: italic;
+}

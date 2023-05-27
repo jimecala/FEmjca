@@ -1,0 +1,60 @@
+.row {
+    background-color: #F2D653;
+    padding-left: 150px;
+    padding-bottom: 80px;
+    padding-right: 150px;
+}
+
+h2 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    text-align: center;
+    font-style: italic;
+    font-size: 3em;
+    margin-bottom: 20px;
+    margin-top: 80px;
+
+}
+
+h3,
+h4 {
+    display: inline;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    text-align: justify;
+    color: #37424A;
+    width: auto;
+
+}
+
+
+/*CSS ANTERIOR*/
+
+/*section {
+    background-color: #F2D653;
+    padding: 80px 0 120px 0;
+}
+
+
+.container {
+    max-width: 900px;
+}
+
+hr {
+    border-top: 1px dashed #37424A;
+    border-bottom: none;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 900px;
+}
+
+p {
+    text-align: justify;
+    font: 300 0.8em/1.625em 'Merriweather Sans', Helvetica, sans-serif;
+    color: #37424A;
+    width: 390px;
+    margin: 0 0 20px 25px;
+    padding-top: 1.2em;
+}*/

@@ -18,6 +18,9 @@ import { CommonModule } from "@angular/common";
 import { EditSkillsComponent } from './components/skills/edit-skills/edit-skills.component';
 import { AddSkillsComponent } from './components/skills/add-skills/add-skills.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { FooterComponent } from './components/footer/footer.component';
+import { PruebasComponent } from './pruebas/pruebas.component';
 //import { PortfolioService } from './services/portfolio.service';
 //import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
@@ -36,6 +39,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
     EditSkillsComponent,
     AddSkillsComponent,
     AboutMeComponent,
+    FooterComponent,
+    PruebasComponent,
     //PortfolioComponent
   ],
   imports: [
@@ -44,7 +49,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
     FontAwesomeModule,
     HttpClientModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    NgCircleProgressModule.forRoot({})
 
   ],
   providers: [],
