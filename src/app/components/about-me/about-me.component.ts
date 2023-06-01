@@ -9,11 +9,11 @@ import { PersonaService } from "../../services/persona.service";
 export class AboutMeComponent {
   persona: any;
 
-  constructor(private personaService:PersonaService) {}
+  constructor(private personaService: PersonaService) { }
 
   ngOnInit(): void {
-    this.personaService.getData().subscribe(data =>{
-      this.persona=data[0];
+    this.personaService.getData().subscribe(data => {
+      this.persona = data[0];
     });
   }
 

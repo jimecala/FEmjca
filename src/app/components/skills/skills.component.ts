@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Skills } from 'src/app/models/skills';
+import { Skills } from 'src/app/models/skills.model';
 import { SkillsService } from 'src/app/services/skills.service';
 
 @Component({
@@ -18,27 +18,28 @@ export class SkillsComponent {
   };
 
 
-  constructor(private skillsService:SkillsService) {}
+  constructor(private skillsService: SkillsService) { }
 
   ngOnInit(): void {
     this.showSkills();
   }
 
-  showSkills():void{
-    this.skillsService.list().subscribe(data =>{
+  showSkills(): void {
+    this.skillsService.list().subscribe(data => {
       this.skills = data;
     });
   }
 
-  deleteSkill(id:number){
-    if (id != undefined){
+  deleteSkill(id: number) {
+    if (id != undefined) {
       this.skillsService.deleteSkill(id).subscribe(
-        data =>{
+        data => {
           this.showSkills();
-        }, err =>{
+        }, err => {
           window.location.reload();
         })
-    }}
+    }
+  }
 
 
 }

@@ -20,9 +20,10 @@ import { AddSkillsComponent } from './components/skills/add-skills/add-skills.co
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FooterComponent } from './components/footer/footer.component';
-import { PruebasComponent } from './pruebas/pruebas.component';
 //import { PortfolioService } from './services/portfolio.service';
-//import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { PruebasComponent } from './components/pruebas/pruebas.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -40,8 +41,8 @@ import { PruebasComponent } from './pruebas/pruebas.component';
     AddSkillsComponent,
     AboutMeComponent,
     FooterComponent,
-    PruebasComponent,
-    //PortfolioComponent
+    PortfolioComponent,
+    PruebasComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +51,8 @@ import { PruebasComponent } from './pruebas/pruebas.component';
     HttpClientModule,
     ReactiveFormsModule,
     CommonModule,
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    FormsModule
 
   ],
   providers: [],
