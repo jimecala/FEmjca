@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PersonaService } from 'src/app/services/persona.service';
+
 
 @Component({
   selector: 'app-pruebas',
@@ -7,13 +7,13 @@ import { PersonaService } from 'src/app/services/persona.service';
   styleUrls: ['./pruebas.component.css']
 })
 export class PruebasComponent {
-  persona: any;
 
-  constructor(private personaService: PersonaService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.personaService.getData().subscribe(data => {
-      this.persona = data[0];
-    });
+
   }
+
+
+
 }

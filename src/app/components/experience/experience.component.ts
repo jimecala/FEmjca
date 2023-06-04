@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-//import { PortfolioService } from 'src/app/services/portfolio.service';
-import { PersonaService } from "src/app/services/persona.service";
+import { Experience } from 'src/app/models/experience';
+import { ExperienceService } from 'src/app/services/experience.service';
 
 @Component({
   selector: 'app-experience',
@@ -8,14 +8,26 @@ import { PersonaService } from "src/app/services/persona.service";
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent {
-  experienceList: any;
-  constructor (private personaData:PersonaService) {}
+  exp: Experience[] = [];
+
+  /*constructor (private expServ: ExperienceService, private tokenServ: TokenService) {}
+
+  isLogged = false;
+  
+  */
+  constructor(private expServ: ExperienceService) { }
 
   ngOnInit(): void {
-    this.personaData.getData().subscribe(data =>{
-      console.log(data);
-      this.experienceList=data.experience;
-    });
+    this.getExperience();
+    /* if (this.tokenServ.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+    */
   }
 
+  getExperience(): void {
+    this.expServ.getExp().subscribe(data => { this.exp = data; });
+  }
 }

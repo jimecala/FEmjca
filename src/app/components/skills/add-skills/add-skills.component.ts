@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Skills } from 'src/app/models/skills.model';
+import { Skills } from 'src/app/models/skills';
 import { SkillsService } from "src/app/services/skills.service";
 
 @Component({
@@ -15,7 +15,7 @@ export class AddSkillsComponent {
   skillLevel = 0;
 
   constructor(private formBuilder: FormBuilder, private skillsService: SkillsService, private activatedRoute: ActivatedRoute,
-    private route: Router) {
+    private router: Router) {
     this.form = formBuilder.group(
       {
         name: ['', [Validators.required]],
@@ -46,7 +46,7 @@ export class AddSkillsComponent {
   onCreate(event: Event): void {
     const skl = new Skills(this.name, this.skillLevel);
     this.skillsService.newSkill(skl).subscribe(data => {
-      this.route.navigateByUrl("/")
+      this.router.navigateByUrl("/")
       window.location.reload();
     }, error => {
       alert("No se pudo agregar nueva habilidad");

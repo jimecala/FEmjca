@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Skills } from 'src/app/models/skills.model';
+import { Skills } from 'src/app/models/skills';
 import { SkillsService } from 'src/app/services/skills.service';
 
 @Component({

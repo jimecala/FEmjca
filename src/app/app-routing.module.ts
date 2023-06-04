@@ -5,6 +5,7 @@ import { EditSkillsComponent } from './components/skills/edit-skills/edit-skills
 import { AddSkillsComponent } from './components/skills/add-skills/add-skills.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { PruebasComponent } from './components/pruebas/pruebas.component';
+import { NewExpComponent } from './components/experience/new-exp/new-exp.component';
 
 
 
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'editSkills/:id', component: EditSkillsComponent },
   //CAMBIAR CUANDO HAGA EL LOGIN:
   { path: '', redirectTo: 'portfolio', pathMatch: 'full' },
-  { path: 'pruebas', component: PruebasComponent }
+  { path: 'pruebas', component: PruebasComponent },
+  { path: 'newexp', component: NewExpComponent }
 
 ];
 

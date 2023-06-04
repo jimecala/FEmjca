@@ -3,6 +3,40 @@
   <div class="container-fluid text-box">
     <hr>
     <div class="text">
+      <div>
+        <h2>Experiencia</h2>
+        <!-- <button type="button" class="btn btn-outline-secondary float-end" routerLink="/new" *ngIf="isLogged"> -->
+        <!-- <button type="button" class="btn btn-outline-secondary float-end" routerLink="/pruebas">
+          Nueva
+        </button> -->
+      </div>
+      <div>
+        <button type="button" class="btn btn-outline-secondary float-end" data-bs-toggle="modal"
+          data-bs-target="#newExpModal">Nueva</button>
+        <table class="table">
+          <tbody>
+            <tr *ngFor="let Experience of exp">
+              <td>{{Experience.employer}}</td>
+              <td>{{Experience.position}}</td>
+              <td>{{Experience.startDate}}</td>
+              <td>{{Experience.endDate}}</td>
+              <td>Editar</td>
+              <td>Borrar</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <app-new-exp></app-new-exp>
+
+
+  <!-- CÓDIGO ESTÁTICO -->
+  <!--
+<div class="row">
+  <div class="container-fluid text-box">
+    <hr>
+    <div class="text">
       <h2>Experiencia</h2>
       <div>
         <ul>
@@ -33,20 +67,4 @@
     </div>
   </div>
 </div>
-
-<!-- CÓDIGO ANTERIOR
-  <section>
-    <div class="container">
-      <h2>Experiencia</h2>
-      <ul class="items-list">
-        <li *ngFor="let experience of experienceList">
-          <div>
-            <h3>{{experience.company}}</h3>
-            <p>{{experience.position}}</p>
-            <p><time>{{experience.start}}</time> - <time>{{experience.end}}</time></p>
-          </div>
-        </li>
-
-      </ul>
-    </div>
-</section>-->
+-->

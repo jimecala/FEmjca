@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Skills } from 'src/app/models/skills.model';
+import { Skills } from 'src/app/models/skills';
 import { SkillsService } from 'src/app/services/skills.service';
 
 @Component({

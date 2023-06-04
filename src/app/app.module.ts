@@ -24,6 +24,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { PruebasComponent } from './components/pruebas/pruebas.component';
 import { FormsModule } from '@angular/forms';
+import { NewExpComponent } from './components/experience/new-exp/new-exp.component';
+import { PruebasModalComponent } from './components/pruebas/pruebas-modal/pruebas-modal.component';
 
 
 @NgModule({
@@ -42,7 +44,10 @@ import { FormsModule } from '@angular/forms';
     AboutMeComponent,
     FooterComponent,
     PortfolioComponent,
-    PruebasComponent
+    PruebasComponent,
+    NewExpComponent,
+    PruebasModalComponent
+
   ],
   imports: [
     BrowserModule,
