@@ -39,31 +39,25 @@ p {
     padding: 0;
 }
 
-/*h2 span {
-    font: 0.67em 'Yeseva One', Georgia, serif;
-}*/
+.list-group-item {
+    /*background-color: transparent;*/
+    width: 390px;
+    margin: 0 0 0 25px;
+    padding-left: 0;
+}
 
 p {
     text-align: justify;
     font: 300 0.8em/1.625em 'Merriweather Sans', Helvetica, sans-serif;
     color: #37424A;
     width: 390px;
-    margin: 0 0 20px 25px;
 }
 
-h3,
-h4 {
-    text-align: center;
+h3 {
     color: #37424A;
     font: 1.2em 'Merriweather', Times New Roman, serif;
     font-weight: 400;
-    margin: 40px 0 50px 0;
     font-style: italic;
-}
-
-h3,
-h4 {
-    display: inline;
 }
 
 

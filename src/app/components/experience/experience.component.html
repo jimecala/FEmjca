@@ -5,66 +5,82 @@
     <div class="text">
       <div>
         <h2>Experiencia</h2>
-        <!-- <button type="button" class="btn btn-outline-secondary float-end" routerLink="/new" *ngIf="isLogged"> -->
-        <!-- <button type="button" class="btn btn-outline-secondary float-end" routerLink="/pruebas">
-          Nueva
-        </button> -->
-      </div>
-      <div>
         <button type="button" class="btn btn-outline-secondary float-end" data-bs-toggle="modal"
-          data-bs-target="#newExpModal">Nueva</button>
-        <table class="table">
-          <tbody>
-            <tr *ngFor="let Experience of exp">
-              <td>{{Experience.employer}}</td>
-              <td>{{Experience.position}}</td>
-              <td>{{Experience.startDate}}</td>
-              <td>{{Experience.endDate}}</td>
-              <td>Editar</td>
-              <td>Borrar</td>
-            </tr>
-          </tbody>
-        </table>
+          data-bs-target="#newExpModal"><i class="fa-solid fa-plus"></i></button>
+      </div>
+      <div class="position-relative">
+        <div>
+          <ul class="list-group list-group-light mb-4" *ngFor="let Experience of exp">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center">
+                <div class="ms-3">
+                  <h3>{{Experience.employer}}</h3>
+                  <p class="fw-bold mb-1">{{Experience.position}}</p>
+                  <p class="text-muted mb-0">{{Experience.startDate | date: 'dd/MM/yyyy'}} -
+                    {{Experience.endDate | date: 'dd/MM/yyyy'}}</p>
+                  <!-- <a class="btn btn-link btn-rounded btn-sm" href="#" role="button"><i
+                      class="fa-solid fa-pencil"></i></a>
+                  <a class="btn btn-link btn-rounded btn-sm" href="#" role="button"><i
+                      class="fa-solid fa-trash-can"></i></a> -->
+                  <button type="button" class="btn btn-outline-secondary position-absolute top-0 end-0"
+                    style="margin: 5px 50px;" data-bs-toggle="modal" data-bs-target="#newExpModal"><i
+                      class="fa-solid fa-pencil"></i></button>
+                  <button type="button" class="btn btn-outline-secondary position-absolute top-0 end-0"
+                    style="margin: 5px 5px;" data-bs-toggle="modal" data-bs-target="#newExpModal"><i
+                      class="fa-solid fa-trash-can"></i></button>
+
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
   <app-new-exp></app-new-exp>
 
 
+
   <!-- CÓDIGO ESTÁTICO -->
   <!--
-<div class="row">
-  <div class="container-fluid text-box">
-    <hr>
-    <div class="text">
-      <h2>Experiencia</h2>
-      <div>
-        <ul>
-          <li>
-            <h3>Trabajo 1</h3> - <h4>20XX</h4>
-          </li>
-        </ul>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab recusandae culpa est voluptatum, consequuntur
-          facilis obcaecati tempora laboriosam molestiae vitae dolore ut provident repellat esse assumenda dolores?
-          Provident, repudiandae culpa!</p>
-        <ul>
-          <li>
-            <h3>Trabajo 2</h3> - <h4>20XX</h4>
-          </li>
-        </ul>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab recusandae culpa est voluptatum, consequuntur
-          facilis obcaecati tempora laboriosam molestiae vitae dolore ut provident repellat esse assumenda dolores?
-          Provident, repudiandae culpa!</p>
-        <ul>
-          <li>
-            <h3>Trabajo 3</h3> - <h4>20XX</h4>
-          </li>
-        </ul>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab recusandae culpa est voluptatum, consequuntur
-          facilis obcaecati tempora laboriosam molestiae vitae dolore ut provident repellat esse assumenda dolores?
-          Provident, repudiandae culpa!</p>
-      </div>
-    </div>
-  </div>
-</div>
--->
+<div class=" row">
+                      <div class="container-fluid text-box">
+                        <hr>
+                        <div class="text">
+                          <h2>Experiencia</h2>
+                          <div>
+                            <ul>
+                              <li>
+                                <h3>Trabajo 1</h3> - <h4>20XX</h4>
+                              </li>
+                            </ul>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab recusandae culpa est
+                              voluptatum, consequuntur
+                              facilis obcaecati tempora laboriosam molestiae vitae dolore ut provident repellat esse
+                              assumenda dolores?
+                              Provident, repudiandae culpa!</p>
+                            <ul>
+                              <li>
+                                <h3>Trabajo 2</h3> - <h4>20XX</h4>
+                              </li>
+                            </ul>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab recusandae culpa est
+                              voluptatum, consequuntur
+                              facilis obcaecati tempora laboriosam molestiae vitae dolore ut provident repellat esse
+                              assumenda dolores?
+                              Provident, repudiandae culpa!</p>
+                            <ul>
+                              <li>
+                                <h3>Trabajo 3</h3> - <h4>20XX</h4>
+                              </li>
+                            </ul>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab recusandae culpa est
+                              voluptatum, consequuntur
+                              facilis obcaecati tempora laboriosam molestiae vitae dolore ut provident repellat esse
+                              assumenda dolores?
+                              Provident, repudiandae culpa!</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                -->

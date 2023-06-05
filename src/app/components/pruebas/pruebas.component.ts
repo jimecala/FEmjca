@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Experience } from 'src/app/models/experience';
+import { ExperienceService } from 'src/app/services/experience.service';
 
 
 @Component({
@@ -7,13 +9,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./pruebas.component.css']
 })
 export class PruebasComponent {
+  exp: Experience[] = [];
 
-  constructor() { }
+  constructor(private expServ: ExperienceService) { }
 
   ngOnInit(): void {
-
+    this.getExperience();
   }
 
-
-
+  getExperience(): void {
+    this.expServ.getExp().subscribe(data => { this.exp = data; });
+  }
 }

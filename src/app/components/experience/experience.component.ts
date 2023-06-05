@@ -30,4 +30,17 @@ export class ExperienceComponent {
   getExperience(): void {
     this.expServ.getExp().subscribe(data => { this.exp = data; });
   }
+
+  deleteExp(id: number) {
+    if (id != undefined) {
+      this.expServ.deleteExp(id).subscribe(
+        data => {
+          //alert("Halidad eliminada!!!");
+          this.getExperience();
+        }, error => {
+          //alert("No se pudo eliminar la habilidad!")
+          window.location.reload();
+        })
+    }
+  }
 }
