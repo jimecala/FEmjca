@@ -1,36 +1,85 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { Experience } from 'src/app/models/experience';
 import { ExperienceService } from 'src/app/services/experience.service';
+import { Experience } from 'src/app/models/experience';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-new-exp',
   templateUrl: './new-exp.component.html',
   styleUrls: ['./new-exp.component.css']
 })
+
 export class NewExpComponent {
-  employer: string = '';
-  position: string = '';
-  startDate: Date = new Date('2023-01-01');
-  endDate: Date = new Date('2023-01-01');
+  form: FormGroup;
+  employer = '';
+  position = '';
+  startDate = new Date('2023-01-01');
+  endDate = new Date('2023-01-01');
 
 
-  constructor(private expServ: ExperienceService, private router: Router) { }
+  constructor(private formBuilder: FormBuilder, private expServ: ExperienceService) {
+    this.form = this.formBuilder.group(
+      {
+        employer: ['', [Validators.required, Validators.min(0), Validators.max(100)]],
+        position: ['', [Validators.required, Validators.min(0), Validators.max(100)]],
+        startDate: ['', Validators.required],
+        endDate: ['', Validators.required],
+      }
+    )
+
+  }
 
   ngOnInit(): void {
 
   }
 
-  onNewExp(event: Event): void {
+  //Declaraciones para validaciones
+  get Employer() {
+    return this.form.get('employer');
+  }
+
+  get Position() {
+    return this.form.get('position');
+  }
+
+  get StartDate() {
+    return this.form.get('startDate');
+  }
+
+  get EndDate() {
+    return this.form.get('endDate');
+  }
+
+  //Validaciones
+  get EmployerValid() {
+    return this.Employer?.touched && !this.Employer.valid;
+  }
+
+  get PositionValid() {
+    return this.Position?.touched && !this.Position.valid;
+  }
+
+  get StartDateValid() {
+    return this.StartDate?.touched && !this.StartDate.valid;
+  }
+  get EndDateValid() {
+    return this.EndDate?.touched && !this.EndDate.valid;
+  }
+
+  onNew(): void {
     const exp = new Experience(this.employer, this.position, this.startDate, this.endDate);
-    this.expServ.newExp(exp).subscribe(data => {
+    this.expServ.save(exp).subscribe(data => {
       alert("Experiencia añadida");
-      this.router.navigate(['']);
-    }, err => {
+      window.location.reload();
+    }, error => {
       alert("Error");
-      this.router.navigate(['']);
+      this.form.reset();
     }
     )
+  }
+
+  clean(): void {
+    this.form.reset();
   }
 
 }

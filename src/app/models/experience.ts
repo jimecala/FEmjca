@@ -1,11 +1,9 @@
 export class Experience {
-    id?: number;
+    id?: any;
     employer: string;
     position: string;
     startDate: Date;
     endDate: Date;
-
-
 
     constructor(employer: string, position: string, startDate: Date, endDate: Date) {
         this.employer = employer;

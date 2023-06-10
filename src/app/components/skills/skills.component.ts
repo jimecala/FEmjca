@@ -9,33 +9,32 @@ import { SkillsService } from 'src/app/services/skills.service';
 })
 
 export class SkillsComponent {
-  skills: any;
-  //skills: Skills []=[];
-  skill: Skills = {
-    id: 0,
-    name: "",
-    skillLevel: 0
-  };
-
+  skills: Skills[] = [];
 
   constructor(private skillsService: SkillsService) { }
 
   ngOnInit(): void {
-    this.showSkills();
+    this.load();
+    /* if(this.tokenService.getToken()){
+      this.isLogged = true;
+      } else {
+        this.isLogged = false;
+      } */
   }
 
-  showSkills(): void {
-    this.skillsService.list().subscribe(data => {
+  load(): void {
+    this.skillsService.getData().subscribe(data => {
       this.skills = data;
     });
   }
 
-  deleteSkill(id: number) {
+  delete(id: number) {
     if (id != undefined) {
-      this.skillsService.deleteSkill(id).subscribe(
+      this.skillsService.delete(id).subscribe(
         data => {
-          this.showSkills();
-        }, err => {
+          this.load();
+        }, error => {
+          alert("Error");
           window.location.reload();
         })
     }

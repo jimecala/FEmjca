@@ -15,8 +15,6 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { CommonModule } from "@angular/common";
-import { EditSkillsComponent } from './components/skills/edit-skills/edit-skills.component';
-import { AddSkillsComponent } from './components/skills/add-skills/add-skills.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FooterComponent } from './components/footer/footer.component';
@@ -26,6 +24,7 @@ import { PruebasComponent } from './components/pruebas/pruebas.component';
 import { FormsModule } from '@angular/forms';
 import { NewExpComponent } from './components/experience/new-exp/new-exp.component';
 import { PruebasModalComponent } from './components/pruebas/pruebas-modal/pruebas-modal.component';
+import { NewSklComponent } from './components/skills/new-skl/new-skl.component';
 
 
 @NgModule({
@@ -39,14 +38,13 @@ import { PruebasModalComponent } from './components/pruebas/pruebas-modal/prueba
     SkillsComponent,
     ProjectsComponent,
     LoginComponent,
-    EditSkillsComponent,
-    AddSkillsComponent,
     AboutMeComponent,
     FooterComponent,
     PortfolioComponent,
     PruebasComponent,
     NewExpComponent,
-    PruebasModalComponent
+    PruebasModalComponent,
+    NewSklComponent
 
   ],
   imports: [

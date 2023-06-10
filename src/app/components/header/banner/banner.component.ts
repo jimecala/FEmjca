@@ -10,14 +10,13 @@ import { PersonaService } from 'src/app/services/persona.service';
 export class BannerComponent {
   persona: any;
 
-  constructor(private personaService:PersonaService) {}
+  constructor(private personaService: PersonaService) { }
 
   ngOnInit(): void {
-    this.personaService.getData().subscribe(data =>{
-      //console.log(`Persona${JSON.stringify(data)}`);
-      console.log(data);
-      this.persona=data[0];
+    this.personaService.getData().subscribe(data => {
+      this.persona = data[0];
     });
+
   }
 
 }

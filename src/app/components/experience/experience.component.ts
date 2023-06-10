@@ -8,7 +8,7 @@ import { ExperienceService } from 'src/app/services/experience.service';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent {
-  exp: Experience[] = [];
+  exps: Experience[] = [];
 
   /*constructor (private expServ: ExperienceService, private tokenServ: TokenService) {}
 
@@ -18,7 +18,7 @@ export class ExperienceComponent {
   constructor(private expServ: ExperienceService) { }
 
   ngOnInit(): void {
-    this.getExperience();
+    this.load();
     /* if (this.tokenServ.getToken()){
       this.isLogged = true;
     } else {
@@ -27,18 +27,17 @@ export class ExperienceComponent {
     */
   }
 
-  getExperience(): void {
-    this.expServ.getExp().subscribe(data => { this.exp = data; });
+  load(): void {
+    this.expServ.getData().subscribe(data => { this.exps = data; });
   }
 
-  deleteExp(id: number) {
+  delete(id: number) {
     if (id != undefined) {
-      this.expServ.deleteExp(id).subscribe(
+      this.expServ.delete(id).subscribe(
         data => {
-          //alert("Halidad eliminada!!!");
-          this.getExperience();
+          this.load();
         }, error => {
-          //alert("No se pudo eliminar la habilidad!")
+          alert("Error");
           window.location.reload();
         })
     }

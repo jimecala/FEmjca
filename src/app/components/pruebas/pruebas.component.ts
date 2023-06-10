@@ -18,6 +18,6 @@ export class PruebasComponent {
   }
 
   getExperience(): void {
-    this.expServ.getExp().subscribe(data => { this.exp = data; });
+    this.expServ.getData().subscribe(data => { this.exp = data; });
   }
 }
