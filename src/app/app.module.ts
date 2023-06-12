@@ -21,10 +21,18 @@ import { FooterComponent } from './components/footer/footer.component';
 //import { PortfolioService } from './services/portfolio.service';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { PruebasComponent } from './components/pruebas/pruebas.component';
-import { FormsModule } from '@angular/forms';
-import { NewExpComponent } from './components/experience/new-exp/new-exp.component';
 import { PruebasModalComponent } from './components/pruebas/pruebas-modal/pruebas-modal.component';
+import { FormsModule } from '@angular/forms';
+import { NewEduComponent } from './components/education/new-edu/new-edu.component';
+import { NewExpComponent } from './components/experience/new-exp/new-exp.component';
+import { NewProjComponent } from './components/projects/new-proj/new-proj.component';
 import { NewSklComponent } from './components/skills/new-skl/new-skl.component';
+import { EditEduComponent } from './components/education/edit-edu/edit-edu.component';
+import { EditExpComponent } from './components/experience/edit-exp/edit-exp.component';
+import { EditProjComponent } from './components/projects/edit-proj/edit-proj.component';
+import { EditSkillsComponent } from './components/skills/edit-skills/edit-skills.component';
+
+
 
 
 @NgModule({
@@ -42,9 +50,15 @@ import { NewSklComponent } from './components/skills/new-skl/new-skl.component';
     FooterComponent,
     PortfolioComponent,
     PruebasComponent,
-    NewExpComponent,
     PruebasModalComponent,
-    NewSklComponent
+    NewEduComponent,
+    NewExpComponent,
+    NewSklComponent,
+    NewProjComponent,
+    EditEduComponent,
+    EditExpComponent,
+    EditProjComponent,
+    EditSkillsComponent
 
   ],
   imports: [

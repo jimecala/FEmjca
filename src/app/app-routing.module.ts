@@ -5,10 +5,10 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { PruebasComponent } from './components/pruebas/pruebas.component';
 
 const routes: Routes = [
-  { path: 'portfolio', component: PortfolioComponent },
-  { path: 'login', component: LoginComponent },
   //CAMBIAR CUANDO HAGA EL LOGIN:
   { path: '', redirectTo: 'portfolio', pathMatch: 'full' },
+  { path: 'portfolio', component: PortfolioComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'pruebas', component: PruebasComponent },
 
 ];

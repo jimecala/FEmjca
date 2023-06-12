@@ -5,7 +5,7 @@
 
 .text-box {
     padding: 0px 0 80px 0;
-    max-width: 936px;
+    /* max-width: 936px; */
     margin: 0 auto;
 }
 
@@ -13,7 +13,7 @@ hr {
     border-top: 1px dashed #37424A;
     border-bottom: none;
     margin-bottom: 20px;
-    max-width: 913px;
+    /* max-width: 913px; */
 }
 
 .text {
@@ -21,8 +21,8 @@ hr {
 }
 
 .container {
-    width: 390px;
-    margin-left: 0px;
+    /* width: 390px; */
+    margin-left: 15px;
 }
 
 h2 {
@@ -30,15 +30,11 @@ h2 {
     color: #37424A;
     text-transform: lowercase;
     text-align: right;
-    width: 456px;
+    /* width: 456px; */
     letter-spacing: -0.04em;
     line-height: 1.1em;
     vertical-align: top;
 }
-
-/*h2 span {
-    font: 0.67em 'Yeseva One', Georgia, serif;
-}*/
 
 h3 {
     color: #37424A;
@@ -52,26 +48,7 @@ h3 {
 h4 {
     font: 300 0.8em/1.625em 'Merriweather Sans', Helvetica, sans-serif;
     color: #37424A;
-    width: 390px;
-}
-
-.hard-skills hr,
-.soft-skills hr {
-    margin: 5px;
-    color: inherit;
-    border: 0;
-    border-top: 1px solid;
-    opacity: 0.25;
-}
-
-.soft-skills {
-    margin-top: 30px;
-}
-
-.hard-skills,
-.soft-skills {
-    margin-left: 15px;
-    width: 390px;
+    /* width: 390px; */
 }
 
 .progress {
@@ -82,40 +59,3 @@ h4 {
 .btn {
     font-size: 15px;
 }
-
-
-/*MI CSS*/
-/*.row {
-    background-color: #F2D653;
-    padding-left: 150px;
-    padding-bottom: 80px;
-    padding-right: 150px;
-}
-
-h2 {
-    font-family: 'Libre Baskerville', Georgia, serif;
-    text-align: center;
-    font-style: italic;
-    font-size: 3em;
-    margin-bottom: 20px;
-
-}
-
-p {
-    font-family: 'Inter', sans-serif;
-    text-align: justify;
-    color: #37424A;
-    width: auto;
-
-}
-
-h3 {
-    font-family: 'Libre Baskerville';
-    font-style: italic;
-    text-align: center;
-}
-
-.progress {
-    margin-bottom: 15px;
-    background-color: transparent;
-}*/

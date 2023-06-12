@@ -1,75 +1,46 @@
 <!--Educación-->
 <div class="row">
-  <div class="container-fluid text-box">
+  <div class="container-fluid text-box col-md-10">
     <img alt="Bee without stinger" class="beewithoutstinger beesvg"
       src="https://femmebot.github.io/google-type/images/the-bee-and-jupiter/bee_fill.svg">
-    <hr>
+    <hr class="col-md-12">
     <div class="text">
-      <h2>Educación</h2>
-      <div>
-        <ul>
-          <li>
-            <h3>Estudio 1</h3> - <h4>20XX</h4>
-          </li>
-        </ul>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab recusandae culpa est voluptatum, consequuntur
-          facilis obcaecati tempora laboriosam molestiae vitae dolore ut provident repellat esse assumenda dolores?
-          Provident, repudiandae culpa!</p>
-        <ul>
-          <li>
-            <h3>Estudio 2</h3> - <h4>20XX</h4>
-          </li>
-        </ul>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab recusandae culpa est voluptatum, consequuntur
-          facilis obcaecati tempora laboriosam molestiae vitae dolore ut provident repellat esse assumenda dolores?
-          Provident, repudiandae culpa!</p>
-        <ul>
-          <li>
-            <h3>Estudio 3</h3> - <h4>20XX</h4>
-          </li>
-        </ul>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab recusandae culpa est voluptatum, consequuntur
-          facilis obcaecati tempora laboriosam molestiae vitae dolore ut provident repellat esse assumenda dolores?
-          Provident, repudiandae culpa!</p>
+      <div class="col-md-6">
+        <h2>Educación</h2>
+        <!-- LOGIN -->
+        <!-- <button type="button" *ngIf="isLogged" class="btn btn-outline-secondary float-end" data-bs-toggle="modal"
+          data-bs-target="#newEduModal"><i class="fa-solid fa-plus"></i></button> -->
+        <button type="button" class="btn btn-outline-secondary float-end" data-bs-toggle="modal"
+          data-bs-target="#newEduModal"><i class="fa-solid fa-plus"></i></button>
+      </div>
+
+      <div class="col-md-5">
+        <table class="table align-middle mb-0">
+          <tbody>
+            <tr>
+              <td class="d-flex align-items-center">
+                <div>
+                  <p class="fw-bold mb-1">Institution</p>
+                  <p class="fw-normal mb-1">Degree</p>
+                </div>
+              </td>
+              <td>
+                <span class="badge badge-warning rounded-pill d-inline">Year</span>
+              </td>
+              <td>
+                <div class="d-flex justify-content-end">
+                  <button type=" button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+                    data-bs-target="#editEduModal"><i class="fa-solid fa-pencil"></i></button>
+                  <!-- <button type="button" class="btn btn-outline-secondary" style="margin: 0px 5px;"><i
+                    class="fa-solid fa-trash-can" (click)="delete(edu.id)"></i></button> -->
+                  <button type="button" class="btn btn-outline-secondary" style="margin: 0px 5px;"><i
+                      class="fa-solid fa-trash-can"></i></button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
 </div>
-
-
-<!-- CÓDIGO ANTERIOR-->
-<!--<section>
-    <div class="container">
-      <h2>Educación</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores nemo consequuntur consequatur recusandae necessitatibus architecto id nesciunt ducimus tempore est repudiandae quidem totam fugiat ea, iusto magni perferendis earum quibusdam?</p>
-    </div>
-    </section>-->
-
-
-<!-- CÓDIGO BEE-->
-<!--<section class="mt-5">
-  <div class="container">
-    <div class="row">
-      <hr>
-      <div class="col-xs-12 col-md-4">
-        <h2>Educación<br></h2>
-      </div>
-      <div class="col-xs-12 col-md-8">
-        <p>
-          A Queen Bee from Hymettus flew up to Olympus with some fresh honey from the hive as a present to Jupiter, who
-          was
-          so pleased with the gift that he promised to give her anything she liked to ask for. She said she would be
-          very
-          grateful if he would give stings to the bees, to kill people who robbed them of their honey. Jupiter was
-          greatly
-          displeased with this request, for he loved mankind: but he had given his word, so he said that stings they
-          should
-          have. The stings he gave them, however, were of such a kind that whenever a bee stings a man the sting is left
-          in
-          the wound and the bee dies.
-        </p>
-      </div>
-      <hr>
-    </div>
-  </div>
-</section>-->
