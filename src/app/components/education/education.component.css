@@ -79,3 +79,8 @@ h4 {
 .d-flex.justify-content-end {
     justify-content: flex-end;
 }
+
+.badge-warning {
+    background-color: #fbf0da;
+    color: #73510d;
+}

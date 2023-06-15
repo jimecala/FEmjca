@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Experience } from 'src/app/models/experience';
-import { ExperienceService } from 'src/app/services/experience.service';
+import { Skills } from 'src/app/models/skills';
+import { SkillsService } from 'src/app/services/skills.service';
 
 
 @Component({
@@ -9,15 +9,40 @@ import { ExperienceService } from 'src/app/services/experience.service';
   styleUrls: ['./pruebas.component.css']
 })
 export class PruebasComponent {
-  exp: Experience[] = [];
+  skills: Skills[] = [];
 
-  constructor(private expServ: ExperienceService) { }
+  /*constructor (private expServ: ExperienceService, private tokenServ: TokenService) {}
+
+  isLogged = false;
+  
+  */
+  constructor(private skillsServ: SkillsService) { }
 
   ngOnInit(): void {
-    this.getExperience();
+    this.load();
+    /* if(this.tokenService.getToken()){
+      this.isLogged = true;
+      } else {
+        this.isLogged = false;
+      } */
   }
 
-  getExperience(): void {
-    this.expServ.getData().subscribe(data => { this.exp = data; });
+  load(): void {
+    this.skillsServ.getData().subscribe(data => {
+      this.skills = data;
+    });
   }
+
+  delete(id: number) {
+    if (id != undefined) {
+      this.skillsServ.delete(id).subscribe(
+        data => {
+          this.load();
+        }, error => {
+          alert("Error");
+          window.location.reload();
+        })
+    }
+  }
+
 }

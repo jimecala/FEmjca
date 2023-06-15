@@ -11,8 +11,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 export class NewSklComponent {
   form: FormGroup;
-  name = '';
-  percentage = 0;
 
   constructor(private formBuilder: FormBuilder, private sklServ: SkillsService) {
     this.form = this.formBuilder.group(
@@ -45,15 +43,18 @@ export class NewSklComponent {
     return this.Percentage?.touched && !this.Percentage.valid;
   }
 
+
   onNew(): void {
-    const skl = new Skills(this.name, this.percentage);
-    this.sklServ.save(skl).subscribe(data => {
-      alert("Habilidad añadida");
-      window.location.reload();
-    }, error => {
-      alert("Error");
-      this.form.reset();
-    });
+    if (this.form.valid) {
+      const skl = new Skills(this.form.value.name, this.form.value.percentage);
+      this.sklServ.save(skl).subscribe(data => {
+        alert("Habilidad añadida");
+        window.location.reload();
+      }, error => {
+        alert("Error");
+        this.form.reset();
+      });
+    }
   }
 
   clean(): void {

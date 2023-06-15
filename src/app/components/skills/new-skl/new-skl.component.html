@@ -1,3 +1,4 @@
+<!-- MODAL New -->
 <div class="modal fade" id="newSklModal" tabindex="-1" aria-labelledby="newSklModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -7,15 +8,14 @@
                     (click)="clean()"></button>
             </div>
             <div class="modal-body">
-                <form (ngSubmit)="onNew()" novalidate #f="ngForm">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="name" placeholder="Habilidad" name="name"
-                            [(ngModel)]="name" required>
+                <form [formGroup]="form" (ngSubmit)="onNew()" novalidate #f="ngForm">
+                    <div>
+                        <input type="text" class="form-control" id="name" placeholder="Habilidad" formControlName="name"
+                            required>
                     </div>
-                    <div class="form-group">
+                    <div>
                         <label for="percentage">Nivel (en %)</label>
-                        <input type="text" class="form-control" id="percentage" name="percentage"
-                            [(ngModel)]="percentage" required>
+                        <input type="text" class="form-control" id="percentage" formControlName="percentage" required>
                     </div>
                     <div class="btn-group float-end" style="margin-top: 15px;">
                         <button type="reset" class="btn btn-light">
