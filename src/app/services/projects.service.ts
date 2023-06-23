@@ -7,7 +7,8 @@ import { Projects } from '../models/projects';
   providedIn: 'root'
 })
 export class ProjectsService {
-  url: string = "http://localhost:8080/api/projects/";
+  url: string = "https://portfoliomjca.onrender.com/api/projects/";
+  /* url: string = "http://localhost:8080/api/projects/"; */
 
   constructor(private http: HttpClient) { }
 

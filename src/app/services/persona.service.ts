@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PersonaService {
-  url: string = "http://localhost:8080/api/persona/";
+  url: string = "https://portfoliomjca.onrender.com/api/persona/";
+  /* url: string = "http://localhost:8080/api/persona/"; */
 
   constructor(private http: HttpClient) { }
 

@@ -7,7 +7,8 @@ import { Skills } from "src/app/models/skills";
   providedIn: 'root'
 })
 export class SkillsService {
-  url: string = "http://localhost:8080/api/skills/";
+  url: string = "https://portfoliomjca.onrender.com/api/skills/";
+  /* url: string = "http://localhost:8080/api/skills/"; */
 
   constructor(private http: HttpClient) { }
 

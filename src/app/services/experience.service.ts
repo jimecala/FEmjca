@@ -7,7 +7,8 @@ import { Experience } from '../models/experience';
   providedIn: 'root'
 })
 export class ExperienceService {
-  url = 'http://localhost:8080/api/experience/'
+  url: string = "https://portfoliomjca.onrender.com/api/experience/";
+  /* url = 'http://localhost:8080/api/experience/'; */
 
   constructor(private http: HttpClient) { }
 
