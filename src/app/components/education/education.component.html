@@ -8,33 +8,32 @@
       <div class="col-md-6">
         <h2>Educación</h2>
         <!-- LOGIN -->
-        <!-- <button type="button" *ngIf="isLogged" class="btn btn-outline-secondary float-end" data-bs-toggle="modal"
+        <!-- <button type="button" *ngIf="isLogged" class="btn float-end" data-bs-toggle="modal"
           data-bs-target="#newEduModal"><i class="fa-solid fa-plus"></i></button> -->
-        <button type="button" class="btn btn-outline-secondary float-end" data-bs-toggle="modal"
-          data-bs-target="#newEduModal"><i class="fa-solid fa-plus"></i></button>
+        <button type="button" class="btn float-end" data-bs-toggle="modal" data-bs-target="#newEduModal"><i
+            class="fa-solid fa-plus"></i></button>
       </div>
 
       <div class="col-md-5">
         <table class="table align-middle mb-0">
           <tbody>
-            <tr>
+            <tr *ngFor="let edu of educ">
               <td class="d-flex align-items-center">
                 <div>
-                  <p class="fw-bold mb-1">Institution</p>
-                  <p class="fw-normal mb-1">Degree</p>
+                  <!-- <p class="fw-bold mb-1">Institution</p> -->
+                  <h3>{{edu.institution}}</h3>
+                  <p class="fw-normal mb-1">{{edu.degree}}</p>
                 </div>
               </td>
               <td>
-                <span class="badge badge-warning rounded-pill d-inline">Year</span>
+                <span class="badge badge-warning rounded-pill d-inline">{{edu.endDate | date: 'yyyy':"UTC"}}</span>
               </td>
-              <td>
+              <td class="btnpair">
                 <div class="d-flex justify-content-end">
-                  <button type=" button" class="btn btn-outline-secondary" data-bs-toggle="modal"
-                    data-bs-target="#editEduModal"><i class="fa-solid fa-pencil"></i></button>
-                  <!-- <button type="button" class="btn btn-outline-secondary" style="margin: 0px 5px;"><i
-                    class="fa-solid fa-trash-can" (click)="delete(edu.id)"></i></button> -->
-                  <button type="button" class="btn btn-outline-secondary" style="margin: 0px 5px;"><i
-                      class="fa-solid fa-trash-can"></i></button>
+                  <button type=" button" class="btn" routerLink="/edit-edu/{{edu.id}}"><i
+                      class="fa-solid fa-pencil"></i></button>
+                  <button type="button" class="btn"><i class="fa-solid fa-trash-can"
+                      (click)="delete(edu.id)"></i></button>
                 </div>
               </td>
             </tr>
@@ -44,3 +43,4 @@
     </div>
   </div>
 </div>
+<app-new-edu></app-new-edu>

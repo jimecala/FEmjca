@@ -1,67 +1,28 @@
-<!-- <div class="modal fade" id="editSklModal" tabindex="-1" aria-labelledby="editSklModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="editSklModalLabel">Editar Habilidad</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                    (click)="clean()"></button>
-            </div>
-            <div class="modal-body"> -->
-<form [formGroup]="form" (ngSubmit)="onSave($event)" novalidate #f="ngForm">
-    <input type="hidden" class="form-control" id="skillId" formControlName="id">
-    <div>
-        <input type="text" class="form-control" id="skillName" placeholder="Habilidad" formControlName="name" required>
-    </div>
-    <div>
-        <label for="percentage">Nivel (en %)</label>
-        <input type="text" class="form-control" id="skillPercentage" formControlName="percentage" required>
-    </div>
-    <div class="btn-group float-end" style="margin-top: 15px;">
-        <button type="reset" class="btn btn-light">
-            Limpiar
-        </button>
-        <button type="submit" class="btn btn-dark">
-            Guardar
-        </button>
-    </div>
-</form>
-<!--             </div>
+<!--Edit Skills-->
+<div class="row">
+    <div class="container-fluid text-box col-md-10">
+        <hr class="col-md-12">
+        <div class="text">
+            <h2>Editar Habilidad</h2>
+            <form class="col-md-4" [formGroup]="form" (ngSubmit)="onSave($event)" novalidate #f="ngForm">
+                <input type="hidden" class="form-control" id="skillId" formControlName="id">
+                <div>
+                    <label for="name">Habilidad</label>
+                    <input type="text" class="form-control" id="name" formControlName="name" required>
+                </div>
+                <div>
+                    <label for="percentage">Nivel (en %)</label>
+                    <input type="text" class="form-control" id="percentage" formControlName="percentage" required>
+                </div>
+                <div class="btn-group float-end" style="margin-top: 15px;">
+                    <button type="button" class="btn btn-light" routerLink="">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn btn-dark">
+                        Guardar
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
- -->
-
-<!-- <div class="modal fade" id="editPruebas" tabindex="-1" aria-labelledby="editPruebasLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="editPruebasLabel">Edit Pruebas</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">-->
-<!-- Formulario Habilidad -->
-<!-- <form [formGroup]="form" novalidate #f="ngForm">
-                    <div class="modal-body"> -->
-<!-- Campo: Id(oculto) -->
-<!-- <input type="hidden" id="skillId" class="form-control" formControlName="id"> -->
-<!-- Campo: Nombre -->
-<!--  <div class="mb-3">
-                            <label for="skillName" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="skillName" placeholder="Ingrese un nombre"
-                                formControlName="name" required>
-                        </div> -->
-<!-- Campo: Porcentaje -->
-<!--<div class="mb-3">
-                            <label for="skillPercentage" class="form-label">Porcentaje %</label>
-                            <input type="number" min="0" max="100" id="skillPercentage" class="form-control"
-                                formControlName="porcentaje" placeholder="Ingrese un número entre 0 y 100" required>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Guardar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div> -->

@@ -2,31 +2,27 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="newExpModalLabel">Nueva Experiencia</h1>
+                <h3 class="modal-title" id="newExpModalLabel">Nueva Experiencia</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                     (click)="clean()"></button>
             </div>
             <div class="modal-body">
-                <form (ngSubmit)="onNew()" novalidate #f="ngForm">
-                    <div class="form-group">
-                        <label for="position">Posición</label>
-                        <input type="text" class="form-control" id="position" name="position" [(ngModel)]="position"
-                            required>
-                    </div>
+                <form [formGroup]="form" (ngSubmit)="onNew()" novalidate #f="ngForm">
                     <div class="form-group">
                         <label for="employer">Empresa</label>
-                        <input type="text" class="form-control" id="employer" name="employer" [(ngModel)]="employer"
-                            required>
+                        <input type="text" class="form-control" id="employer" formControlName="employer" required>
                     </div>
                     <div class="form-group">
-                        <label for="startDate">Inicio</label>
-                        <input type="date" class="form-control" id="startDate" name="startDate" [(ngModel)]="startDate"
-                            required>
+                        <label for="position">Posición</label>
+                        <input type="text" class="form-control" id="position" formControlName="position" required>
                     </div>
                     <div class="form-group">
-                        <label for="endDate">Fin</label>
-                        <input type="date" class="form-control" id="endDate" name="endDate" [(ngModel)]="endDate"
-                            required>
+                        <label for="startDate">Desde</label>
+                        <input type="date" class="form-control" id="startDate" formControlName="startDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate">Hasta</label>
+                        <input type="date" class="form-control" id="endDate" formControlName="endDate" required>
                     </div>
                     <div class="btn-group float-end" style="margin-top: 15px;">
                         <button type="reset" class="btn btn-light">
@@ -41,39 +37,3 @@
         </div>
     </div>
 </div>
-
-<!-- <div class="container">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onNewExp()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="position">Posición</label>
-                    <input type="text" class="form-control" id="position" name="position" [(ngModel)]="position"
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="employer">Empresa</label>
-                    <input type="text" class="form-control" id="employer" name="employer" [(ngModel)]="employer"
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="startDate">Posición</label>
-                    <input type="date" class="form-control" id="startDate" name="startDate" [(ngModel)]="startDate"
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="endDate">Posición</label>
-                    <input type="date" class="form-control" id="endDate" name="endDate" [(ngModel)]="endDate" required>
-                </div>
-                <div class="btn-group float-end" style="margin-top: 15px;">
-                    <button type="reset" class="btn btn-light">
-                        Descartar
-                    </button>
-                    <button type="button" class="btn btn-dark">
-                        Guardar
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div> -->

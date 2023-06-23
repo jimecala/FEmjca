@@ -6,86 +6,61 @@
       <div class="col-md-6">
         <h2>Proyectos</h2>
         <!-- LOGIN -->
-        <!-- <button type="button" *ngIf="isLogged" class="btn btn-outline-secondary float-end" data-bs-toggle="modal"
+        <!-- <button type="button" *ngIf="isLogged" class="btn float-end" data-bs-toggle="modal"
           data-bs-target="#newProjModal"><i class="fa-solid fa-plus"></i></button> -->
-        <button type="button" class="btn btn-outline-secondary float-end" data-bs-toggle="modal"
-          data-bs-target="#newProjModal"><i class="fa-solid fa-plus"></i></button>
+        <button type="button" class="btn float-end" data-bs-toggle="modal" data-bs-target="#newProjModal"><i
+            class="fa-solid fa-plus"></i></button>
       </div>
 
       <div class="col-md-5" style="padding-left: 15px;">
         <div class="col-xs-12 part1">
-          <div class="card mb-3" style="margin-left: 15px;">
+
+          <!-- OTRO DISEÑO DE CARD -->
+          <!-- <div class="card mb-3" style="margin-left: 15px;" *ngFor="let proj of projects">
             <div class="d-flex">
               <div>
-                <img src="../../../assets/img/perfil2.jpg" class="img-fluid rounded-start" alt="...">
+                <img [src]="proj.imgProject" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h3 class="card-title">Card title</h3>
-                  <p class="card-text">This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit longer.</p>
+                  <h3 class="card-title">{{proj.name}}</h3>
+                  <p class="card-text">{{proj.description}}</p>
                   <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                   <div class="float-end">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+                    <button type="button" class="btn" data-bs-toggle="modal"
                       data-bs-target="#editProjModal"><i class="fa-solid fa-pencil"></i></button>
-                    <button type="button" class="btn btn-outline-secondary" style="margin: 0px 5px;"><i
-                        class="fa-solid fa-trash-can"></i></button>
+                    <button type="button" class="btn" style="margin: 0px 5px;"><i
+                        class="fa-solid fa-trash-can" (click)="delete(proj.id)"></i></button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card" style="margin-left: 15px;">
-          <img src="../../../assets/img/perfil2.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <div style="display: flex; justify-content: space-between;">
-              <h3 class="card-title">Card title</h3>
-              <div>
-                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
-                  data-bs-target="#editProjModal"><i class="fa-solid fa-pencil"></i></button>
-                <button type="button" class="btn btn-outline-secondary" style="margin: 0px 5px;"><i
-                    class="fa-solid fa-trash-can"></i></button>
+        </div> -->
+
+
+          <div class="card" *ngFor="let proj of projects">
+            <img [src]="proj.imgProject" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div style="display: flex; justify-content: space-between;">
+                <h3 class="card-title">{{proj.name}}</h3>
+                <div>
+                  <button type="button" class="btn" routerLink="/edit-proj/{{proj.id}}"><i
+                      class="fa-solid fa-pencil"></i></button>
+                  <button type="button" class="btn"><i class="fa-solid fa-trash-can"
+                      (click)="delete(proj.id)"></i></button>
+                </div>
               </div>
-            </div>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-              the card's content.</p>
-            <!-- <div class="float-end">
-              <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+              <p class="card-text">{{proj.description}}</p>
+              <!-- <div class="float-end">
+              <button type="button" class="btn" data-bs-toggle="modal"
                 data-bs-target="#editProjModal"><i class="fa-solid fa-pencil"></i></button>
-              <button type="button" class="btn btn-outline-secondary" style="margin: 0px 5px;"><i
+              <button type="button" class="btn" style="margin: 0px 5px;"><i
                   class="fa-solid fa-trash-can"></i></button>
             </div> -->
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-
-
-  <!--Proyectos-->
-  <!-- <div class="row">
-  <div class="container-fluid text-box col-md-10">
-    <hr class="col-md-12">
-    <div class="text">
-      <div class="col-md-6">
-        <h2>Proyectos</h2>-->
-  <!-- LOGIN -->
-  <!-- <button type="button" *ngIf="isLogged" class="btn btn-outline-secondary float-end" data-bs-toggle="modal"
-          data-bs-target="#newSklModal"><i class="fa-solid fa-plus"></i></button> -->
-  <!-- <button type="button" class="btn btn-outline-secondary float-end" data-bs-toggle="modal"
-          data-bs-target="#newSklModal"><i class="fa-solid fa-plus"></i></button>
-      </div>
-
-      <div class="col-md-5" style="padding-left: 15px;">
-        <h3>Proyecto1</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, repellendus enim eos quo possimus illo
-          similique cum necessitatibus hic, alias nostrum quos velit sit optio, fuga impedit porro excepturi quaerat!
-        </p>
-        <img src="../../../assets/img/banner2.png" class="img-fluid">
-      </div>
-
-    </div>
-  </div>
-  -->
+    <app-new-proj></app-new-proj>

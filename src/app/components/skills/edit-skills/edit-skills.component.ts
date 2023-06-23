@@ -10,7 +10,7 @@ import { SkillsService } from 'src/app/services/skills.service';
   styleUrls: ['./edit-skills.component.css']
 })
 export class EditSkillsComponent {
-  skills: Skills = new Skills('', 0);;
+  skills: Skills = new Skills('', 0);
   form: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private skillsServ: SkillsService, private activatedRoute: ActivatedRoute, private router: Router) {
@@ -36,7 +36,7 @@ export class EditSkillsComponent {
   };
 
 
-  //Para las validaciones
+  //Validaciones
   get Name() {
     return this.form.get('name');
   }
@@ -48,10 +48,9 @@ export class EditSkillsComponent {
   onSave(event: Event): void {
     event.preventDefault;
     this.skillsServ.save(this.form.value).subscribe(data => {
-      //alert("Habilidad modificada!!!!");
       this.router.navigate(['']);
     }, err => {
-      alert("Falló la modificación de la habilidad!");
+      alert("Error");
     })
   }
 

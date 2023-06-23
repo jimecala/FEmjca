@@ -6,10 +6,10 @@
             <div class="col-md-6">
                 <h2>Habilidades</h2>
                 <!-- LOGIN -->
-                <!-- <button type="button" *ngIf="isLogged" class="btn btn-outline-secondary float-end" data-bs-toggle="modal"
+                <!-- <button type="button" *ngIf="isLogged" class="btn float-end" data-bs-toggle="modal"
             data-bs-target="#newSklModal"><i class="fa-solid fa-plus"></i></button> -->
-                <button type="button" class="btn btn-outline-secondary float-end" data-bs-toggle="modal"
-                    data-bs-target="#newSklModal"><i class="fa-solid fa-plus"></i></button>
+                <button type="button" class="btn float-end" data-bs-toggle="modal" data-bs-target="#newSklModal"><i
+                        class="fa-solid fa-plus"></i></button>
             </div>
 
             <div class="container col-md-5">
@@ -17,10 +17,10 @@
 
                     <div class="text mb-1">
                         <h3>{{skill.name}}</h3>
-                        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
-                            data-bs-target="#editPruebas"><i class="fa-solid fa-pencil"></i></button>
-                        <button type="button" class="btn btn-outline-secondary" style="margin: 0px 5px;"><i
-                                class="fa-solid fa-trash-can" (click)="delete(skill.id)"></i></button>
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editPruebas"><i
+                                class="fa-solid fa-pencil"></i></button>
+                        <button type="button" class="btn" style="margin: 0px 5px;"><i class="fa-solid fa-trash-can"
+                                (click)="delete(skill.id)"></i></button>
                     </div>
                     <div class="progress">
                         <div class="progress-bar bg-success" role="progressbar" aria-label="Success example"

@@ -25,7 +25,7 @@ export class NewSklComponent {
   ngOnInit(): void {
   }
 
-  //Declaraciones para validaciones
+  //Declaraciones
   get Name() {
     return this.form.get('name');
   }

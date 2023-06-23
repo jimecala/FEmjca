@@ -5,7 +5,6 @@
 
 .text-box {
     padding: 80px 0 80px 0;
-    /* max-width: 936px; */
     margin: 0 auto;
 }
 
@@ -24,7 +23,6 @@ hr {
     border-top: 1px dashed #37424A;
     border-bottom: none;
     margin-bottom: 20px;
-    /* max-width: 913px; */
 }
 
 .text {
@@ -40,41 +38,29 @@ h2 {
     color: #37424A;
     text-transform: lowercase;
     text-align: right;
-    /* width: 456px; */
     letter-spacing: -0.04em;
     line-height: 1.1em;
     vertical-align: top;
 }
 
-h1,
-h2,
-p {
-    margin: 0;
-    padding: 0;
-}
-
+h3,
 p {
     text-align: justify;
-    font: 300 0.8em/1.625em 'Merriweather Sans', Helvetica, sans-serif;
     color: #37424A;
-    /*width: 390px;*/
     margin: 0 0 20px 25px;
 }
 
-h3,
-h4 {
-    text-align: center;
-    color: #37424A;
-    font: 1.2em 'Merriweather', Times New Roman, serif;
-    font-weight: 400;
-    margin: 40px 0 50px 0;
-    font-style: italic;
-}
-
-h3,
-h4 {
+h3 {
+    font: 1.1em 'Merriweather Sans', Helvetica, sans-serif;
+    font-weight: 600;
     display: inline;
 }
+
+p {
+    font: 300 0.8em/1.625em 'Merriweather Sans', Helvetica, sans-serif;
+}
+
+
 
 .d-flex.justify-content-end {
     justify-content: flex-end;
@@ -83,4 +69,8 @@ h4 {
 .badge-warning {
     background-color: #fbf0da;
     color: #73510d;
+}
+
+.btnpair {
+    padding-right: 0px;
 }

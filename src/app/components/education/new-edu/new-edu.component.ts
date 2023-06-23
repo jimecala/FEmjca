@@ -10,14 +10,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class NewEduComponent {
   form: FormGroup;
-  institution = '';
-  endDate = new Date('2023-01-01');
 
   constructor(private formBuilder: FormBuilder, private eduServ: EducationService) {
     this.form = this.formBuilder.group(
       {
         institution: ['', [Validators.required, Validators.min(0), Validators.max(100)]],
-        endDate: ['', [Validators.required, Validators.min(0), Validators.max(100)]],
+        degree: ['', [Validators.required, Validators.min(0), Validators.max(100)]],
+        endDate: [''],
       }
     )
 
@@ -31,6 +30,10 @@ export class NewEduComponent {
     return this.form.get('institution');
   }
 
+  get Degree() {
+    return this.form.get('degree');
+  }
+
   get EndDate() {
     return this.form.get('endDate');
   }
@@ -40,13 +43,17 @@ export class NewEduComponent {
     return this.Institution?.touched && !this.Institution.valid;
   }
 
+  get DegreeValid() {
+    return this.Degree?.touched && !this.Degree.valid;
+  }
+
   get EndDateValid() {
     return this.EndDate?.touched && !this.EndDate.valid;
   }
 
   onNew(): void {
-    const skl = new Education(this.institution, this.endDate);
-    this.eduServ.save(skl).subscribe(data => {
+    const edu = new Education(this.form.value.institution, this.form.value.degree, this.form.value.endDate);
+    this.eduServ.save(edu).subscribe(data => {
       alert("Educación añadida");
       window.location.reload();
     }, error => {

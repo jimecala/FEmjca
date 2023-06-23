@@ -11,10 +11,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 export class NewExpComponent {
   form: FormGroup;
-  employer = '';
-  position = '';
-  startDate = new Date('2023-01-01');
-  endDate = new Date('2023-01-01');
+  /*  employer = '';
+   position = '';
+   startDate = new Date('2023-01-01');
+   endDate = new Date('2023-01-01'); */
 
 
   constructor(private formBuilder: FormBuilder, private expServ: ExperienceService) {
@@ -33,7 +33,7 @@ export class NewExpComponent {
 
   }
 
-  //Declaraciones para validaciones
+  //Declaraciones
   get Employer() {
     return this.form.get('employer');
   }
@@ -67,7 +67,7 @@ export class NewExpComponent {
   }
 
   onNew(): void {
-    const exp = new Experience(this.employer, this.position, this.startDate, this.endDate);
+    const exp = new Experience(this.form.value.employer, this.form.value.position, this.form.value.startDate, this.form.value.endDate);
     this.expServ.save(exp).subscribe(data => {
       alert("Experiencia añadida");
       window.location.reload();
